@@ -1,0 +1,23 @@
+{
+  "name": "slack-github-issue",
+  "version": "0.0.0",
+  "description": "Code for Slack bot to auto comment the issue information for a specific repository when a user types the issue number.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/augbog/slack-github-issue"
+  },
+  "author": "Augustus Yuan <hello@augustusyuan.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/augbog/slack-github-issue/issues"
+  },
+  "homepage": "https://github.com/augbog/slack-github-issue",
+  "devDependencies": {
+    "slack-client": "~1.4.1",
+    "request": "~2.58.0"
+  }
+}

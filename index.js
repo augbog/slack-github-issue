@@ -5,7 +5,7 @@ module.exports = Client;
  
 // Create a new bot at https://YOURSLACK.slack.com/services/new/bot
 var BOT_TOKEN  = 'YOURSLACK-BOT-TOKEN',
-    REPO_OWNER = 'augbog', //i.e.
+    REPO_OWNER = 'augbog',
     REPO_NAME  = 'slack-github-issue';
 
 var slack = new Client(BOT_TOKEN, true, true);
@@ -39,9 +39,8 @@ slack.on('open', function () {
 slack.on('message', function(message) {
     var channel = slack.getChannelGroupOrDMByID(message.channel);
     var user = slack.getUserByID(message.user);
-    //if (message.type === 'message' && isDirect(slack.self.id, message.text)) {
     // if we find a #...
-    if (message.type === 'message' && message.text.indexOf('#') > -1) {
+    if (message.type === 'message' && message.hasOwnProperty('text') && message.text.indexOf('#') > -1) {
       var issueNum = message.text.substr(message.text.indexOf('#')).split(' ')[0];
       if (/^#\d+$/.test(issueNum)) {
         var issueDescription,

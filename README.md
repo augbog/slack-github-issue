@@ -3,6 +3,8 @@ Code for Slack bot to auto comment the issue information for a specific reposito
 
 Makes use of [node-slack-client](https://github.com/slackhq/node-slack-client).
 
+<img src="https://raw.githubusercontent.com/augbog/slack-github-issue/master/Slack-Github-Bot.png" alt="Slack Github Bot" />
+
 ## How to run
 1. Clone repo into your local machine (`https://github.com/augbog/slack-github-issue.git`)
 2. Navigate to folder (`cd slack-github-issue`)
